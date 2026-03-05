@@ -1,4 +1,5 @@
 .total_container{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     min-height: 100vh;
     min-width: 100vw;
     background-color: bisque;
@@ -9,6 +10,7 @@
     min-height: 60px;
     width: 100%;
     display:flex;
+    z-index: 10;
 }
 
 .nav_right_container{
@@ -52,17 +54,18 @@ a {
     min-height: 100vh;
 }
 #first_pillar, #second_pillar, #third_pillar{
+    z-index: 1;
     display: flex;
+    justify-content: center;
+    text-align: justify;
     flex-direction: column;
     position: absolute;
     top: 0px;
     right: 0px;
     background-color: rgb(255, 255, 255);
-    border: 1px solid black;
     padding: 10px;
     min-height: 100vh;
     width: 20%;
-    /* start offscreen; slide in when we add `.visible` */
     transition-delay: 0.0s;
     transform: translateY(100%);
     transition: transform 0.3s ease-in-out;
@@ -70,6 +73,10 @@ a {
 #first_pillar.visible, #second_pillar.visible, #third_pillar.visible{
     transform: translateY(0);
 }
+p{
+    font-size: 15px;
+}
+
 /* the hidden_menu class is no longer used to hide via display:none;
    it was preventing the slide animation when the element was removed from layout. */
 /* .hidden_menu{
