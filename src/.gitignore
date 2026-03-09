@@ -1,4 +1,4 @@
 .env
-backend/credentials.json
+credentials.json
 __pycache__/
 *.pyc

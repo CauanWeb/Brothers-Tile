@@ -15,7 +15,7 @@
     }
 }
 .nav_container{
-    position: absolute;
+    position: flex;
     top: 10px;
     min-height: 60px;
     width: 100%;
