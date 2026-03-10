@@ -185,9 +185,10 @@ a {
     }
 
     .nav_container{
+        display: flex;
         position: absolute;
         top: 0px;
-        right: 0px;
+        margin-left: 2px;
         justify-content: center;
         align-items: center;
     }
