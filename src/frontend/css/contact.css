@@ -105,7 +105,16 @@ h1{
 /* Responsive Design */
 @media (max-width: 768px) {
     .brother_tiles_logo {
-        margin-left: 20px;
+        display: none;
+    }
+
+    .nav_container{
+        display: flex;
+        position: absolute;
+        top: 0px;
+        margin-left: 6px;
+        justify-content: center;
+        align-items: center;
     }
 
     .nav_right_container {
@@ -141,6 +150,10 @@ h1{
 @media (min-width: 769px) and (max-width: 1024px) {
     .contact_section {
         width: 70%;
+    }
+
+    .brother_tiles_logo{
+        animation: fadeIn 1s ease-out forwards;
     }
 
     h1 {

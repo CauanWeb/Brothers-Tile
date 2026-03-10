@@ -86,7 +86,16 @@ p{
 /* Responsive Design */
 @media (max-width: 768px) {
     .brother_tiles_logo {
-        margin-left: 20px;
+        display: none;
+    }
+
+    .nav_container{
+        display: flex;
+        position: absolute;
+        top: 0px;
+        margin-left: 6px;
+        justify-content: center;
+        align-items: center;
     }
 
     .nav_right_container {
@@ -96,7 +105,7 @@ p{
 
     .home, .contact, .services, .projects {
         margin-right: 10px;
-        font-size: 0.8rem;
+        font-size: 0.1rem;
     }
 
     .pillar_container {
@@ -127,6 +136,10 @@ p{
     .pillar_container {
         margin-left: 50px;
         width: 50%;
+    }
+
+    .brother_tiles_logo{
+        animation: fadeIn 1s ease-out forwards;
     }
 
     #first_pillar, #second_pillar, #third_pillar {
