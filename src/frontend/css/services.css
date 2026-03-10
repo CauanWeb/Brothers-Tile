@@ -91,7 +91,6 @@ p{
     }
 
     .nav_container{
-        display: flex;
         position: absolute;
         top: 0px;
         margin-left: 6px;
@@ -107,7 +106,7 @@ p{
 
     .home, .contact, .services, .projects {
         margin-right: 10px;
-        font-size: 0.1rem;
+        font-size: 1rem;
     }
 
     .pillar_container {
