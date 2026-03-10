@@ -209,6 +209,7 @@ a {
     .about_section {
         min-height: 200px;
         padding: 20px;
+        left: 2px;
         justify-content: center;
         align-items: center;
     }
