@@ -4,6 +4,7 @@
     min-width: 100vw;
     background-color: bisque;
     margin: 0 auto;
+    padding: 0;
 }
 .nav_container{
     position: fixed;
@@ -96,6 +97,7 @@ p{
         margin-left: 6px;
         justify-content: center;
         align-items: center;
+        z-index: 1;
     }
 
     .nav_right_container {
@@ -116,6 +118,7 @@ p{
 
     #first_pillar, #second_pillar, #third_pillar {
         position: static;
+        z-index: 0;
         width: 90%;
         margin: 20px auto;
         transform: none;
