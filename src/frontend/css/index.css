@@ -182,6 +182,7 @@ a {
 @media (max-width: 768px) {
     body{
         min-height: 100vh;
+        overflow: hidden;
     }
     .brother_tiles_logo {
         display: none;
@@ -203,7 +204,7 @@ a {
 
     .home, .contact, .services, .projects {
         margin-right: 10px;
-        font-size: .5rem;
+        font-size: .55rem;
     }
 
     .title_section {
