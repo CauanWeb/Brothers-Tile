@@ -1,4 +1,7 @@
 /* CSS for the Brothers Tile Project */
+*{
+    box-sizing: border-box;
+}
 
 html, body{
     overflow-x:hidden;
@@ -6,8 +9,8 @@ html, body{
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    scrollbar-width: none;
 }
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -48,10 +51,9 @@ button{
 .brother_tiles_logo{
     height: 100%;
     width: auto;
-    margin-left: 150px;
+    padding-left: 2rem;
     display: flex;
     justify-content: left;
-    align-items: left;
     color: grey;
     cursor: pointer;
 }
@@ -72,7 +74,7 @@ a {
 .title_section{
     /* margin-top: -100px; */
     padding-top: 60px;
-    min-height: 590px;
+    min-height: 91vh;
     width: 100%;
     background-color: rgb(136, 87, 87);
     display: flex;
@@ -158,11 +160,11 @@ a {
     font-size: 50px;
     cursor: pointer;
     z-index: 10;
-    opacity: 100%;
+    opacity: 1;
 }
 
 .arrow_left:hover, .arrow_right:hover{
-    opacity: 100%;
+    opacity: 1;
     transition: opacity 0.5s;
 }
 
@@ -178,6 +180,9 @@ a {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    body{
+        min-height: 100vh;
+    }
     .brother_tiles_logo {
         display: none;
     }
