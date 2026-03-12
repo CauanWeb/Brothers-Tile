@@ -200,7 +200,7 @@ a {
     .nav_container{
         display: flex;
         position: absolute;
-        top: 0px;
+        top: 10px;
         margin-left: 6px;
         justify-content: center;
         align-items: center;
