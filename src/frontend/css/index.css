@@ -93,7 +93,7 @@ a {
     align-items: center;
     min-height: 250px;
     width: 100%;
-    background-color: lightgrey;
+    /* background-color: rgb(136, 87, 87); */
     /* border: 1px solid black; */
 }
 
@@ -125,10 +125,6 @@ a {
 .slide.active{
     display:block;
 }
-
-/* @keyframes fadeIn {
-    
-} */
 
 .slide img{
     width: 100%;
@@ -169,6 +165,10 @@ a {
     transition: opacity 0.5s;
 }
 
+h1{
+    font-size: 40px;
+}
+
 .text{
     text-align: center;
 }
@@ -191,6 +191,17 @@ a {
         width: 100%;
         min-height: 100vh;
         background-color: rgb(136, 87, 87);
+    }
+
+    .projects_section{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    width: 100%;
+    background-color: rgb(255, 252, 252); 
     }
 
     .brother_tiles_logo {
