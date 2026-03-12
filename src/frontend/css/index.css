@@ -190,7 +190,7 @@ a {
     .total_container{
         width: 100%;
         min-height: 100vh;
-        background-color: #ff0000;
+        background-color: rgb(136, 87, 87);
     }
 
     .brother_tiles_logo {
@@ -200,7 +200,7 @@ a {
     .nav_container{
         display: flex;
         position: absolute;
-        top: 10px;
+        top: 15px;
         margin-left: 6px;
         justify-content: center;
         align-items: center;
