@@ -202,7 +202,7 @@ a {
         position: absolute;
         top: 0px;
         margin-left: 6px;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
     }
 
