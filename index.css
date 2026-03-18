@@ -1,8 +1,24 @@
+* ::after,
+* ::before{
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
     padding: 0;
     min-height: 100vh;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+:root{
+    --bar-width: 60px;
+    --bar-height: 8px;
+    --hamburger-gap: 6px;
+    --foreground: #333;
+    --background: white;
+    --hamburger-margin: 5px;
+    --animation-timing: 200ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }
 
 .nav_container{
@@ -22,19 +38,58 @@ body{
     width: 100%;
 }
 
+.menu::before,
+.menu::after,
+.menu input{
+    content: "";
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: var(--foreground);
+    border-radius: 9999px;
+    transition: opacity var(--animation-timing), width var(--animation-timing);
+    transform-origin: left center;
+}
+
+.menu input{
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
 .menu{
-    display: block;
-    position: fixed;
-    right: 0px;
-    justify-self: right;
-    transition: right 0.3s ease;
-    background-color: transparent;
-    border: none;
-    font-size: 60px;
+    --x-width: calc(var(--hamburger-height) * 1.41421356237);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+
+    width:max-content;
+    height: max-content;
+
+    position:absolute;
+    top: var(--hamburger-margin);
+    right: var(--hamburger-margin);
+    z-index: 2;
     cursor: pointer;
 }
 
-.slide_menu{
+.menu:has(input:checked)::before{
+    rotate: 45deg;
+    width: var(--x-width);
+}
+
+.menu:has(input:checked)::after{
+    rotate: -45deg;
+    width: var(--x-width);
+}
+
+.menu input:checked{
+    opacity: 0;
+    width: 0;
+}
+
+/* .slide_menu{
     position: fixed;
     top: 0;
     right:-250px;
@@ -42,15 +97,11 @@ body{
     height: 100vh;
     background-color: lightgray;
     transition: right 0.3s ease;
-}
+} */
 
-.menu.active{
-        right: 250px;
-    }
-
-.slide_menu.active{
+/* .slide_menu.active{
     right: 0;
-}
+} */
 
 a{
     display: none;
