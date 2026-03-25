@@ -19,11 +19,12 @@ body{
 }
 
 .nav{ 
-    width: 100%;
+    width: calc(100% - 40px);
     position: absolute;
     top: 20px;
     right: 20px;
     display: flex;
+    justify-content: flex-end;
     gap: 20px;
 }
 
@@ -44,7 +45,10 @@ body{
 
 .image{
     display:flex;
-    justify-self: left;
+    justify-self: space-between;
+    align-self: center;
+    min-height: auto;
+    width: 150px;
 }
 
 a{
