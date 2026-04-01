@@ -4,6 +4,7 @@
 }
 
 body{
+    overflow: hidden;
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -11,7 +12,7 @@ body{
 }
 
 html{
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
 }
 
 .menu{
@@ -22,7 +23,7 @@ html{
     display: none;
 }
 
-.nav{ 
+.nav{
     width: calc(100% - 40px);
     position: absolute;
     top: 20px;
@@ -61,6 +62,7 @@ a{
 }
 
 .title{
+    overflow: hidden;
     position: relative;        
     min-height: 100vh;
     width: 100%;
@@ -81,30 +83,42 @@ a{
 }
 
 video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     z-index: -10;
 }
 
 .about{
-    min-height: 300px;
-    width: 100%;
+    min-height: 150px;
+    width: 90%;
     display: flex;
     flex-direction: column;
-    opacity: 0;
     transform: translateY(80px);
-    transition: all 1s ease forwards;
+    transition: all 1s ease;
 
 }
 
-.about.show{
+.hidden{
+    color: #333;
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 1s ease;
+}
+
+.show{
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0px);
 }
 
 .about_text{
-    opacity: 0.8;
-    position: absolute; 
-    left: 50px;
+    margin-left: 50px;
+    text-align: justify;
 }
+
 
 @media (max-width: 786px){
     .nav a{
@@ -150,7 +164,7 @@ video{
 
         width:max-content;
 
-        position:absolute;
+        position:fixed;
         top: var(--hamburger-margin);
         right: 0px;
         z-index: 2;
@@ -187,13 +201,13 @@ video{
 
     .slide_menu{
         display: block;
-        position: absolute;
-        top: 10px; 
+        position: fixed;
+        top: 0px;
         right: 0px;
         translate: 1000%;
         transition: translate var(--animation-timing);
         padding: 0.5rem 1rem;
-        padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+        padding-top: 3rem;
         background-color: var(--foreground);
         color: var(--background);
         max-width: 50rem;
@@ -204,5 +218,20 @@ video{
         translate: 0;
     }
 
+    .home, .contact, .projects, .services{
+        display: none;
+    }
+
+    .home:hover, .contact:hover, .projects:hover, .services:hover{
+        display: none;
+    }
+
+    .home-phone, .contact-phone, .projects-phone, .services-phone{
+        display: inline-block;
+        color: black;
+        text-decoration: none;
+        font-size: 15px;
+        opacity: 1;
+    }
 
 }
