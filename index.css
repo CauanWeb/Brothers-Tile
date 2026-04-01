@@ -93,13 +93,10 @@ video{
 }
 
 .about{
-    min-height: 150px;
+    min-height: 100vh;
     width: 90%;
     display: flex;
     flex-direction: column;
-    transform: translateY(80px);
-    transition: all 1s ease;
-
 }
 
 .hidden{
@@ -119,8 +116,20 @@ video{
     text-align: justify;
 }
 
+.imagery{
+    height: 300px;
+    width: 300px;
+    display: flex;
+    margin-left: 60px;
+
+    float: left;
+}
 
 @media (max-width: 786px){
+    body{
+        overflow: visible;
+    }
+
     .nav a{
         display: none;
     }
