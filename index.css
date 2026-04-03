@@ -103,14 +103,14 @@ video{
 .hidden{
     color: #333;
     opacity: 0;
-    /* transform: translateY(40px);
-    transition: all 1s ease; */
+    transform: translateY(40px);
+    transition: all 1s ease;
     z-index: 1;
 }
 
 .show{
     opacity: 1;
-    /* transform: translateY(0px); */
+    transform: translateY(0px);
     z-index: 1;
 }
 
@@ -284,11 +284,6 @@ video{
         justify-content: center;;
         text-align: center;
         margin: 0 auto;
-    }
-
-    .about, .about_text, #images {
-        position: relative; 
-        z-index: 1;
     }
 
 }
