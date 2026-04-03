@@ -286,4 +286,9 @@ video{
         margin: 0 auto;
     }
 
+    .about, .about_text, #images {
+        position: relative; 
+        z-index: 1;
+    }
+
 }
