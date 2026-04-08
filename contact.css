@@ -1,0 +1,207 @@
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+html{
+    scroll-behavior: auto;
+}
+
+.menu{
+    display: none;
+    z-index: 10000;
+}
+
+.slide_menu{
+    display: none;
+    z-index: 9999;
+}
+
+.nav{
+    z-index: 2;
+    width: calc(100% - 40px);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brothers{
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+}
+
+.home, .contact, .projects, .services{
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+    opacity: 0.3;
+    transition: all 0.65s ease-in-out;
+}
+
+.home:hover, .contact:hover, .projects:hover, .services:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.contact_container{
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    left: 25%;
+}
+
+.message{
+    min-height: 100vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 45%;
+    justify-content: center;
+}
+
+.message textarea{
+    height: 250px;
+    width: 400px;
+}
+
+
+@media (max-width: 786px){
+    body{
+        overflow: visible;
+    }
+
+    .nav a{
+        display: none;
+    }
+
+    :root{
+    --bar-width: 60px;
+    --bar-height: 8px;
+    --hamburger-gap: 6px;
+    --foreground: #333;
+    --background: white;
+    --hamburger-margin: 5px;
+    --animation-timing: 200ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+}
+
+    .menu::before,
+    .menu::after,
+    .menu input{
+        content: "";
+        width: var(--bar-width);
+        height: var(--bar-height);
+        background-color: var(--foreground);
+        border-radius: 9999px;
+        transition: opacity var(--animation-timing), width var(--animation-timing), rotate var(--animation-timing), translate var(--animation-timing), background-color var(--animation-timing);
+        transform-origin: left center;
+        z-index: 10000;
+    }
+
+    .menu input{
+        appearance: none;
+        padding: 0;
+        margin: 0;
+        outline: none;
+    }
+
+    .menu{
+        --x-width: calc(var(--hamburger-height) * 1.41421356237);
+
+        display: flex;
+        flex-direction: column;
+        gap: var(--hamburger-gap);
+
+        width:max-content;
+
+        position: fixed;
+        top: var(--hamburger-margin);
+        right: 0px;
+        z-index: 9999;
+        cursor: pointer;
+    }
+
+    .menu:has(input:checked){
+        --foreground: white;
+    }
+
+    .menu:has(input:focus-visible)::before
+    .menu:has(input:focus-visible)::after
+    .menu:has input:focus-visible{
+        border: 1px solid var(--background);
+        box-shadow: 0 0 0 1px var(--foreground);
+    }
+
+    .menu:has(input:checked)::before{
+        rotate: 45deg;
+        width: var(--x-width);
+        translate: 0 calc(var(--bar-height) / -2);
+    }
+
+    .menu:has(input:checked)::after{
+        rotate: -45deg;
+        width: var(--x-width);
+        translate: 0 calc(var(--bar-height) / 2);
+    }
+
+    .menu input:checked{
+        opacity: 0;
+        width: 0;
+    }
+
+    .slide_menu{
+        display: flex;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        transform: translateX(100%);
+        transition: transform var(--animation-timing);
+        padding: 0.5rem 1rem;
+        padding-top: 3rem;
+        background-color: var(--foreground);
+        
+        color: var(--background);
+        max-width: 50rem;
+        min-height: 100vh;
+        z-index: 9998;
+    }
+
+    .menu:has(input:checked) + .slide_menu{
+        transform: translateX(0);
+    }
+
+    .home, .contact, .projects, .services{
+        display: none;
+    }
+
+    .home:hover, .contact:hover, .projects:hover, .services:hover{
+        display: none;
+    }
+
+    .home-phone, .contact-phone, .projects-phone, .services-phone{
+        display: inline-block;
+        color: black;
+        text-decoration: none;
+        font-size: 15px;
+        opacity: 1;
+    }
+
+}
