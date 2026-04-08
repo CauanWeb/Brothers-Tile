@@ -62,40 +62,41 @@
     </div>
     <form action="">
         <div class="contact_container">
-            <div>
-                <label for="firstName">First Name</label>
-                <br>
-                <input id="firstName" type="text" required>
-            </div>
+            <div class="groups">
+                <div>
+                    <input id="firstName" type="text" placeholder="First Name" required>
+                </div>
 
-            <div>
-                <label for="lastName">Last Name</label>
-                <br>
-                <input id="lastName" type="text" required>
+                <div>
+                    <input id="lastName" type="text" placeholder="Last Name" required>
+                </div>
             </div>
             
-            <div>
-                <label for="email">Email</label>
-                <br>
-                <input id="email" type="text" placeholder="example@gmail.com">
+            <div class="groups">
+                <div>
+                    <input id="email" type="text" placeholder="Email">
+                </div>
+
+                <div>
+                    <input id="phoneNumber" type="tel" placeholder="Phone Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                    <br>
+                </div>
+            </div>
+           
+            <div class="message">
+                <textarea name="message" id="message" placeholder="Message"></textarea>
             </div>
 
-            <div>
-                <label for="phoneNumber">Phone Number</label>
-                <br>
-                <input id="phoneNumber" type="tel" placeholder="123-456-7890" 
-        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-                <br>
-            </div>
         </div>
-
-        <div class="message">
-            <label for="message">Message</label>
-            <textarea name="message" id="message"></textarea>
-        </div>
-
+        
         <input type="text" style="display: flex; position: absolute; left: 1000000px;">
     </form>
+
+    <div class="reach">
+        <div style="color: black;">
+            hello
+        </div>
+    </div>
     
 </body>
 </html>
