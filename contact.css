@@ -93,13 +93,20 @@ body{
     background-color: transparent;
     border: 1px solid black;
     display: flex;
+    justify-content: center;
     height: fit-content;
     width: 35%;
 }
 
+.submit button{
+    width: 100%;
+}
+
 button{
+    background-color: transparent;
+    border: none;
     cursor: pointer;
-    justify-self: center;
+    text-align: center;
 }
 
 input{
@@ -110,7 +117,6 @@ input{
 
 input:focus{
     outline: none;
-    
 }
 
 textarea{
