@@ -4,6 +4,7 @@
 }
 
 body{
+    overflow: hidden;
     background-color: tan;
     margin: 0;
     padding: 0;
@@ -86,20 +87,19 @@ body{
 
 .submit{
     position: absolute;
-    /* left: 45%; */
     left: 15%;
     bottom: 20%;
     border-radius: 10px;
     background-color: transparent;
     border: 1px solid black;
     display: flex;
-    justify-self: left;
-    width: auto;
     height: fit-content;
+    width: 35%;
 }
 
 button{
     cursor: pointer;
+    justify-self: center;
 }
 
 input{
@@ -110,6 +110,7 @@ input{
 
 input:focus{
     outline: none;
+    
 }
 
 textarea{
