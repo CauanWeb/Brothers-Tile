@@ -112,11 +112,25 @@ button{
 input{
     border: none;
     background-color: transparent;
-    transition: 0.3s ease-in-out;
+    animation: 1s fadeIn ease forwards;
 }
 
-input .active{
-    border-bottom: 2px solid transparent;
+@keyframes fadeIn{
+    0%{
+        border-bottom: 0px solid black ;
+    }
+    25%{
+        border-bottom: 0.5px solid black;
+    }
+    50%{
+        border-bottom: 1px solid black;
+    }
+    75%{
+        border-bottom: 1.5px solid black;
+    }
+    100%{
+        border-bottom: 2px solid black;
+    }
 }
 
 input:focus{
