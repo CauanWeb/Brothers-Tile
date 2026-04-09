@@ -60,31 +60,31 @@
             </nav>
         </aside>
     </div>
-    <form action="">
+    <form action="https://formspree.io/f/xlgokyra" method="POST">
         <div class="contact_container">
             <div class="groups">
                 <div>
-                    <input id="firstName" type="text" placeholder="First Name" required>
+                    <input name="First Name" type="text" placeholder="First Name" required>
                 </div>
 
                 <div>
-                    <input id="lastName" type="text" placeholder="Last Name" required>
+                    <input name="Last Name" type="text" placeholder="Last Name" required>
                 </div>
             </div>
             
             <div class="groups">
                 <div>
-                    <input id="email" type="text" placeholder="Email">
+                    <input name="Email" type="email" placeholder="Email">
                 </div>
 
                 <div>
-                    <input id="phoneNumber" type="tel" placeholder="Phone Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                    <input id="phoneNumber" name="Phone Number" type="tel" placeholder="Phone Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
                     <br>
                 </div>
             </div>
            
             <div class="message">
-                <textarea name="message" id="message" placeholder="Message"></textarea>
+                <textarea name="Message" placeholder="Message" autocomplete="off"></textarea>
             </div>
         </div>
         
@@ -108,6 +108,8 @@
             </h3>
         </div>
     </div>
-    
+
+
+<script src="contact.js"></script>    
 </body>
 </html>
