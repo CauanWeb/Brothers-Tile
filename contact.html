@@ -62,6 +62,9 @@
         </aside>
     </div>
     <form action="https://formsubmit.co/ab364e45d20bc89a95a7593ea056beb6" method="POST">
+        <!-- Disable Captcha -->
+        <input type="hidden" name="_captcha" value="false">
+
         <div class="contact_container">
             <div class="groups">
                 <div>
@@ -96,7 +99,8 @@
             </button>
         </div>
 
-        <input type="text" name="company" style="display: flex; position: absolute; left: 1000000px;">
+        <!-- Honeypot -->
+        <input type="text" name="_honey" style="display: none;">
     </form>
 
     <div class="container">
