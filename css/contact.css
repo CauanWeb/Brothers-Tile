@@ -13,6 +13,10 @@ body{
     font: 588;
 }
 
+.title{
+    display: none;
+}
+
 .contact_container{
     min-height: 100vh;
     width: 65%;
@@ -102,6 +106,15 @@ textarea{
     body{
         overflow-y: visible;
         overflow-x: hidden;
+        background-color: white;
+    }
+
+    .title{
+        width: 100%;
+        display: block;
+        position:absolute;
+        left: 29%;
+        top: 4rem;
     }
 
     .reach_us{
@@ -114,8 +127,18 @@ textarea{
     }
 
     .groups{
-        padding-top: 20px;
-        flex-direction: column;
+        padding-top: 50px;
+    }
+
+    .message{
+        width: 95%;
+    }
+
+    .submit{
+        position: relative;
+        display: inline-block;
+        height: 10px;
+        background-color: blue;
     }
 
 }
