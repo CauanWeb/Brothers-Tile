@@ -33,6 +33,8 @@ body{
 }
 
 .groups{
+    margin-left: 10px;
+    width: 100%;
     flex-direction: row;
     display: flex;
     gap: 3rem;
@@ -41,33 +43,22 @@ body{
 .message{
     display: flex;
     flex-direction: column;
-    width: 55%;
+    width: 100%;
+    gap: 1rem;
 }
 
 .message textarea{
     height: 150px;
 }
 
-.submit{
-    position: absolute;
-    left: 15%;
-    bottom: 20%;
-    border-radius: 10px;
-    background-color: transparent;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    height: fit-content;
-    width: 35%;
-}
-
 .submit button{
-    width: 100%;
+    border-radius: 5px;
+    border: 1px solid black;
+    justify-self: right;
 }
 
 button{
     background-color: transparent;
-    border: none;
     cursor: pointer;
     text-align: center;
 }
@@ -83,7 +74,8 @@ input:focus{
 
 textarea{
     background-color: transparent;
-    outline: 1px solid black;
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
 .container{
@@ -124,21 +116,38 @@ textarea{
     .contact_container{
         margin: 0 auto;
         width: 100%;
+        align-items: normal;
+        gap: 2rem;
     }
 
     .groups{
-        padding-top: 50px;
+        flex-direction: column;
+        gap: 1.5rem;
     }
 
     .message{
         width: 95%;
     }
 
-    .submit{
-        position: relative;
-        display: inline-block;
-        height: 10px;
-        background-color: blue;
+    input{
+        border: 1px solid black;
+        border-radius: 5px;
+        width: 90%;
+    }
+
+    .contact_container input{
+        height: 30px;
+    }
+
+    input::placeholder{
+        font-size: larger;
+    }
+
+    .submit button{
+        border-radius: 0;
+        width: 95%;
+        height: 30px;
+        background-color: black;
     }
 
 }

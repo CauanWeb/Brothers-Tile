@@ -62,9 +62,12 @@
         </aside>
     </div>
     
-    <h1 class="title"> Contact Us </h1>
+    <h1 class="title">Contact Us</h1>
 
     <form action="https://formsubmit.co/ab364e45d20bc89a95a7593ea056beb6" method="POST">
+        <!-- Honeypot -->
+        <input type="text" name="_honey" style="display: none;">
+        
         <!-- Disable Captcha -->
         <input type="hidden" name="_captcha" value="false">
 
@@ -75,13 +78,17 @@
                 </div>
 
                 <div>
+                    <input name="Middle Name" type="text" placeholder="Middle Name (Optional)">
+                </div>
+
+                <div>
                     <input name="Last Name" type="text" placeholder="Last Name" required>
                 </div>
             </div>
             
             <div class="groups">
                 <div>
-                    <input name="Email" type="email" placeholder="Email">
+                    <input name="Email" type="email" placeholder="Email (Optional)">
                 </div>
 
                 <div>
@@ -89,21 +96,21 @@
                     <br>
                 </div>
             </div>
-           
-            <div class="message">
-                <textarea name="Message" placeholder="Message" autocomplete="off"></textarea>
+           <div class="groups">
+                <div class="message">
+                    <textarea name="Message" placeholder="Message" autocomplete="off"></textarea>
+                    
+                    <div class="submit">
+                        <input type="hidden" name="_next" value="https://brothers-tile.vercel.app/thankyou.html">
+                        <button type="submit">
+                            Submit
+                        </button>
+                    </div>
+                </div>
             </div>
+           
         </div>
         
-        <div class="submit">
-            <button type="submit">
-                <input type="hidden" name="_next" value="https://brothers-tile.vercel.app/thankyou.html">
-                Submit
-            </button>
-        </div>
-
-        <!-- Honeypot -->
-        <input type="text" name="_honey" style="display: none;">
     </form>
 
     <div class="container">
