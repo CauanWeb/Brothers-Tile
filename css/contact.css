@@ -5,16 +5,20 @@
 
 body{
     overflow: hidden;
-    background-color: tan;
     margin: 0;
     padding: 0;
     min-height: 100vh;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font: 588;
+    /* background-color: ; */
 }
 
 .title{
     display: none;
+}
+
+#con_dropdown{
+    margin-top: -16.5px;
 }
 
 .contact_container{
@@ -33,11 +37,18 @@ body{
 }
 
 .groups{
-    margin-left: 10px;
+    margin-left: 30px;
     width: 100%;
     flex-direction: row;
     display: flex;
     gap: 3rem;
+}
+
+#dropdown{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid black;
+    width: 200px;
 }
 
 .message{
@@ -48,13 +59,20 @@ body{
 }
 
 .message textarea{
+    width: 100%;
     height: 150px;
+}
+
+.submit{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .submit button{
     border-radius: 5px;
     border: 1px solid black;
-    justify-self: right;
+    padding: 0.75rem 1.25rem;
 }
 
 button{
@@ -88,29 +106,41 @@ textarea{
 
 .reach_us{
     text-align: center;
+    margin-left: 50px;
     min-height: 100vh;
-    width: 55%;
-    background-color: rgb(238, 205, 161);
-    padding: 70px;
+    width: 90%;
+    padding-top: 70px;
+    background-color: rgba(127, 255, 212, 0.226);
+}
+
+.social-icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: #333; /* Background color of the circle */
+    color: white;
 }
 
 @media (max-width: 786px){
     body{
         overflow-y: visible;
         overflow-x: hidden;
-        background-color: white;
     }
 
     .title{
         width: 100%;
         display: block;
-        position:absolute;
-        left: 29%;
-        top: 4rem;
+        text-align: center;
+        margin-bottom: -50px;
+        margin-top: 60px;
     }
 
-    .reach_us{
-        display: none
+    .container{
+        display: none;
     }
 
     .contact_container{
@@ -118,6 +148,7 @@ textarea{
         width: 100%;
         align-items: normal;
         gap: 2rem;
+        margin-left: -15px;
     }
 
     .groups{
@@ -126,7 +157,7 @@ textarea{
     }
 
     .message{
-        width: 95%;
+        width: 90%;
     }
 
     input{
@@ -139,15 +170,32 @@ textarea{
         height: 30px;
     }
 
-    input::placeholder{
+    input::placeholder, textarea::placeholder{
         font-size: larger;
     }
 
-    .submit button{
-        border-radius: 0;
-        width: 95%;
-        height: 30px;
-        background-color: black;
+    #con_dropdown{
+        margin-top: 0;
     }
 
+    .submit button{
+        color: black;
+        width: 95%;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    select{
+        border-radius: 5px;
+        height: 40px;
+    }
+
+    #dropdown{
+        border-bottom: 0;
+        border: 1px solid black;
+        width: 93%;
+    }
+    
 }
